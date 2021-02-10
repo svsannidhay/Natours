@@ -1,0 +1,26 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svsannidhay/Natours.git"
+  },
+  "author": "sannidhay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svsannidhay/Natours/issues"
+  },
+  "homepage": "https://github.com/svsannidhay/Natours#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
