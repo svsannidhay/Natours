@@ -1,8 +1,11 @@
 .story {
   width: 75%;
   margin: 0 auto;
+  &:last-child {
+    margin-top: 8rem;
+  }
   box-shadow: 0 3rem 6rem rgba($color-black,.1);
-  background-color: $color-white;
+  background-color: rgba($color-white,.6);
   border-radius: .3rem;
   padding: 6rem;
   padding-left: 9rem;
@@ -10,6 +13,7 @@
   transform: skewX(-12deg);
 
   &__shape {
+    position:relative;
     width:15rem;
     height: 15rem;
     float:left;
@@ -22,9 +26,32 @@
 
   &__img {
     height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.4s;
   }
-
+  &__caption {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s;
+    backface-visibility: hidden;
+  }
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%,-50%);
+  }
   &__text {
     transform: skewX(+12deg);
+  }
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px);
   }
 }
