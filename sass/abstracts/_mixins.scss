@@ -32,6 +32,9 @@ $breakpoint argument choices
 
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 30em) { @content }; //<500px
+  }
   @if $breakpoint == phone {
     @media (max-width: 37.5em) { @content }; //600px
   }
